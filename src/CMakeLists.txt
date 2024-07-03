@@ -15,6 +15,8 @@ set(SOURCE_FILES
     ${INCLUDE_FILES}
 )
 
+include_directories(${LIB_EVENT_INCLUDE_DIR})
+
 add_library(pistache OBJECT ${SOURCE_FILES})
 set_target_properties(pistache PROPERTIES POSITION_INDEPENDENT_CODE ${PISTACHE_PIC})
 target_compile_features(pistache PRIVATE cxx_std_17)
